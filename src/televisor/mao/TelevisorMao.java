@@ -19,78 +19,53 @@ public class TelevisorMao {
      } 
      String sw; 
      public void CambiarCanal(String elegir){
+         if  (elegir.equals("ELEGIR")) {
          System.out.println("INGRESE NUMERO DE CANAL");
      do{ String num; num=op.next(); 
-     if (num.equals("9")) System.out.println(">>>>>usted esta viendo FRECUENCIA LATINA"); 
-     if(num.equals("11")) System.out.println(">>>>>usted esta viendo AMERICA TELEVISION"); 
-     if(num.equals("13")) System.out.println(">>>>>usted esta viendo ATV"); 
-     if(num.equals("4")) System.out.println(">>>>>usted esta viendo RED GLOBAL"); 
+     if (num.equals("9")) System.out.println(">>>>>usted esta viendo CANAL INSTITUCIONAL"); 
+     if(num.equals("11")) System.out.println(">>>>>usted esta viendo SEÑAL COLOMBIA"); 
+     if(num.equals("13")) System.out.println(">>>>>usted esta viendo CANAL 13"); 
+     if(num.equals("4")) System.out.println(">>>>>usted esta viendo RCN"); 
      System.out.println("····presione !!SW!! para cambiar·····"); 
      System.out.println("····presione SALIR para cambiar de opcion·······"); sw=op.next(); 
      }
      while(sw.equals("sw")); 
      } 
+     }
      public void CantVolumen(int x){
-         if (x>0 && x<51) {
-             System.out.println("volumen medio..:::");
+         if (x>10 && x<51) {
+             System.out.println("volumen MEDIO......:::");
          } 
          if(x>51 && x<101){ 
-             System.out.println("volumen alto......:::!!!!!¨¨"); 
+             System.out.println("volumen ALTO......:::!!!!!¨¨"); 
+         }
+         if(x>0 && x<10){ 
+             System.out.println("volumen BAJO..::"); 
          }
      } 
-     public void Mute(String silence){ 
-         if (silence.equals("mute")) { 
+     public void Mute(String mute){ 
+         if (mute.equals("mute")) { 
              System.out.println("!!!MUTE!!!!");
          }
      } 
-     public void CambiaraCable(String camb){ 
-         if (camb.equals("si")) {
-             System.out.println("!!!usted esta viendo cable!!!"); 
-         }
+     
+    public void CambiaraCable(String puerto) { 
+         if (puerto.equals("ELEGIR")){
+         System.out.println("ELIGA SU PUERTO DE ENTRADA");
+     do{ String camb; camb=op.next(); 
+     if (camb.equals("1")) System.out.println(">>>>>usted esta en el puerto TV"); 
+     if(camb.equals("2")) System.out.println(">>>>>usted esta en el puerto CABLE"); 
+     if(camb.equals("3")) System.out.println(">>>>>usted esta en el puerto HDMI"); 
+     if(camb.equals("4")) System.out.println(">>>>>usted esta en el puerto RGB"); 
+     System.out.println("····presione !!SW!! para cambiar·····"); 
+     System.out.println("····presione SALIR para cambiar de opcion·······"); sw=op.next();
+     
      }
-     public void AccesoInternet(String x){ String salir; 
-     if(x.equals("192.168.1.3")){ 
-         do{ System.out.println( "elija la opcion"); 
-         System.out.println( "::::::::::::::::::"); 
-         System.out.println( "1:Internet"); 
-         System.out.println( "2:music");
-         System.out.println( "3:videos");
-         System.out.println( "::::::::::::::::::"); 
-         int opcion; String camb; String nav; opcion=op.nextInt(); 
-         do{ if(opcion==1) {
-             System.out.println(" :::.escriba el navegador "); 
-             System.out.println(" ........................"); 
-             System.out.println(" google chrome"); 
-             System.out.println(" explorer"); 
-             System.out.println(" firefox");
-             System.out.println(" opera"); 
-             nav=op.next(); 
-             if(nav.equals("chrome"))
-                 System.out.println(" BIENVENIDO A google Chrome");
-             if(nav.equals("explorer"))
-                 System.out.println(" BIENVENIDO A EXPLORER");
-             if(nav.equals("firefox")) 
-                 System.out.println(" BIENVENIDO A FIREFOX");
-             if(nav.equals("opera"))
-                 System.out.println(" BIENVENIDO A OPERA"); 
-             System.out.println(" ......");
-             System.out.println("presione cambiar para estar en otro navegador");
-             System.out.println("presione salir");
-         }
-                  camb=op.next(); 
-         }
-         while(camb.equals("cambiar")); 
-         if(opcion==2)
-             System.out.println(" :::.eliga la musica que desea escuchar");
-         if(opcion==3)
-             System.out.println(" :::.eliga los videos que desea escuchar"); 
-         System.out.println(" presione sw para cambiar");
-         System.out.println(" presione off para salir de internet"); 
-         salir=op.next();
-         }
-         while(salir.equals("sw")); 
+     while(sw.equals("sw"));
+     }
+         
      } 
-     System.out.println(" ingrese una ip correcta"); 
-     }
+     
+
 } 
 
